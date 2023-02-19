@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import FakeData
 
-from public.moonshine.moonshine.models.unet import UNet
+from moonshine.models.unet import UNet
 
 
 class SegmentationModel(nn.Module):
