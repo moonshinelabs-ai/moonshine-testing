@@ -41,14 +41,14 @@ class LightningModel(pl.LightningModule):
 def main():
     model = LightningModel()
     dataset = FakeData(
-        size=10000,
+        size=64,
         image_size=(3, 256, 256),
         num_classes=2,
         transform=transforms.ToTensor(),
     )
     data_loader = DataLoader(dataset, batch_size=16)
 
-    trainer = pl.Trainer(max_epochs=3)
+    trainer = pl.Trainer(max_epochs=1)
     trainer.fit(device="auto", model=model, train_dataloaders=data_loader)
 
 
