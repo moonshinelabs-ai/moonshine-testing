@@ -1,0 +1,2 @@
+moonshine==0.1.0
+pytorch-lightning
